@@ -1,0 +1,23 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>LabWork 1</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+
+<body>
+<div>
+    <form action="#" th:action="@{/}" th:object="${NumberModel}" method="post">
+        <p>Нешифрованный: <input type="text" th:field="*{str1}"/> Зашифрованный текст:
+        <button type="submit" name="action" th:value="Code" th:text="Зашифровать"> </button></p>
+        <p>Зашифрованный: <input type="text" th:field="*{decstr}"/> Нешифрованный текст:
+            <button type="submit" name="action" th:value="Decode" th:text="'Расшифровать'"> </button></p>
+
+        <p><button type="submit" name="action" th:value="delete" th:text="'Удалить историю'"> </button>
+            <button type="submit" name="action" th:value="sort" th:text="'Сортировать'"> </button></p>
+        <textarea rows="9" cols="47" th:text="${message}"/><br>
+
+    </form>
+</div>
+</body>
+</html>
